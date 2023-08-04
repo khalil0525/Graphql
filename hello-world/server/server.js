@@ -1,6 +1,9 @@
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 const typeDefs = `#graphql
+schema {
+    query: Query
+}
 type Query {
     greeting: String
 }

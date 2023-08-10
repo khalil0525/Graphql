@@ -1,13 +1,17 @@
 type Query {
-  messages: [Message!]
+	messages: [Message!]
 }
 
 type Mutation {
-  addMessage(text: String!): Message
+	addMessage(text: String!): Message
+}
+
+type Subscription {
+	messageAdded: Message
 }
 
 type Message {
-  id: ID!
-  user: String!
-  text: String!
+	id: ID!
+	user: String!
+	text: String!
 }
